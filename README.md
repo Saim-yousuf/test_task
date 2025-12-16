@@ -18,16 +18,14 @@ This repository contains my Flutter interview test project. The app demonstrates
 ---
 
 ## 2. Project Structure
-
-lib/
+```lib/
 ├── go_routes/ # Contains app routing logic
 ├── config/ # App-wide configuration like colors and scroll behavior
 ├── models/ # Data models used in the app
 ├── provider/ # State management classes
 ├── utils/ # Helper functions and constants
 ├── views/ # All app screens
-└── widgets/ # Reusable UI components
-
+└── widgets/ # Reusable UI components```
 
 > The project structure separates concerns clearly, keeping the app scalable and maintainable.
 
