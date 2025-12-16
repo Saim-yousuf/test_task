@@ -1,4 +1,4 @@
-package com.softcodix.walletric
+package com.dev.testtask
 
 import io.flutter.embedding.android.FlutterActivity
 

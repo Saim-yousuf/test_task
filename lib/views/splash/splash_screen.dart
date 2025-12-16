@@ -1,7 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:walletric/utils/image_path.dart';
+import 'package:test_task/config/colors.dart';
+import 'package:test_task/go_routes/go_navigator.dart';
+import 'package:test_task/go_routes/go_router.dart';
+import 'package:test_task/utils/image_path.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -31,7 +34,9 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller.forward();
 
-    load();
+    Timer(const Duration(seconds: 2), () {
+      Go.namedReplace(context, RouteName.navbar);
+    });
   }
 
   @override
@@ -40,18 +45,20 @@ class _SplashScreenState extends State<SplashScreen>
     super.dispose();
   }
 
-  Future<void> load() async {
-   
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(AssetsPath.png.splashBg),
-            fit: BoxFit.cover,
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomRight,
+            colors: [
+              Palette.secondary.withOpacity(0.4),
+              Palette.black,
+              Palette.black,
+              Palette.black,
+            ],
           ),
         ),
         child: Center(
@@ -60,7 +67,7 @@ class _SplashScreenState extends State<SplashScreen>
             child: FadeTransition(
               opacity: _animation,
               child: Image.asset(
-                AssetsPath.png.logoSplash,
+                AssetsPath.png.happy,
                 width: 250,
                 height: 250,
               ),
