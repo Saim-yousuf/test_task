@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:walletric/views/home/home_screen.dart';
+import 'package:walletric/views/navbar/navbar.dart';
 
 import 'package:walletric/views/splash/splash_screen.dart';
 
@@ -28,7 +30,7 @@ class RouteName {
         name: splashScreen,
         pageBuilder: (context, state) {
           return const MaterialPage(
-            child: SplashScreen(),
+            child: BottomNavbar(),
           );
         },
       ),

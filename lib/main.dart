@@ -6,6 +6,7 @@ import 'package:walletric/config/colors.dart';
 import 'package:walletric/config/scroll_behavior.dart';
 import 'package:walletric/go_routes/go_router.dart';
 import 'package:walletric/helper/shared_prefences/preference_helper.dart';
+import 'package:walletric/provider/app/bottom_nav_pro.dart';
 import 'package:walletric/provider/auth/auth_provider.dart';
 import 'package:walletric/repository/auth/auth_repo.dart';
 import 'package:walletric/utils/api.dart';
@@ -26,6 +27,9 @@ void main() async {
       ChangeNotifierProvider(
         create: (context) => AuthPro(context.read<AuthRepo>()),
       ),
+      ChangeNotifierProvider(
+        create: (context) => BottomNavPro(),
+      ),
     ], child: MyApp()),
   );
 }
@@ -42,13 +46,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         brightness: Brightness.light,
-        scaffoldBackgroundColor: Palette.white,
+        scaffoldBackgroundColor: Palette.black,
         appBarTheme: AppBarTheme(
-          backgroundColor: Palette.white,
-          surfaceTintColor: Palette.white,
-          iconTheme: const IconThemeData(color: Palette.black),
+          backgroundColor: Palette.black,
+          surfaceTintColor: Palette.black,
+          iconTheme: const IconThemeData(color: Palette.white),
           titleTextStyle: GoogleFonts.poppins(
-            color: Palette.black,
+            color: Palette.white,
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
