@@ -33,10 +33,12 @@ This repository contains my Flutter interview test project. The app demonstrates
 
 ## 3. App Screenshots
 
-![Home Screen](screenshots/home_screen.png)  
-![Home Calendar](screenshots/home_calendar.png)  
-![Plan Screen](screenshots/plan_screen.png)  
-![Mood Screen](screenshots/mood_screen.png)  
+<p float="left">
+  <img src="screenshots/home_screen.png" width="200" />
+  <img src="screenshots/home_calendar.png" width="200" />
+  <img src="screenshots/plan_screen.png" width="200" />
+  <img src="screenshots/mood_screen.png" width="200" />
+</p>
 
 [View all screenshots](screenshots/)
 
