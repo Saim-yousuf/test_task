@@ -1,0 +1,8 @@
+name: Default
+version: 1.0
+actions:
+  - name: prebuild
+    script_path: ios/ci_scripts/pre_xcodebuild.sh
+  - name: build
+    build_type: archive
+    scheme: Runner
